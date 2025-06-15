@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dynamic Drag & Drop Form Builder
 
-## Getting Started
+A modern, no-code form designer built with Next.js and TypeScript. Create forms visually by dragging and dropping field types, configure properties, and collect submissions.
 
-First, run the development server:
+## ✨ Features
+
+- **Visual Form Designer**: Drag and drop interface for building forms
+- **Multiple Field Types**: Text, textarea, select, checkbox, and radio buttons
+- **Real-time Configuration**: Edit labels, placeholders, validation, and options
+- **Form Preview & Validation**: Test forms before publishing
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **JSON Storage**: Simple file-based form storage
+
+## 🚀 Quick Start
 
 ```bash
+# Clone and install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to start building forms.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+form-builder/
+├── app/
+│   ├── api/forms/          # Form CRUD API routes
+│   ├── designer/           # Form builder page
+│   ├── forms/[id]/         # Form preview/submission page
+│   └── page.tsx           # Home page
+├── components/
+│   ├── form-builder/      # Drag & drop form builder
+│   └── form-preview/      # Form display & submission
+├── data/forms.json        # Sample form data
+└── types/form.ts          # TypeScript definitions
+```
 
-## Learn More
+## 🎯 Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. **Create Form**: Visit `/designer` and drag fields from the palette
+2. **Configure Fields**: Click settings icon to customize labels, options, etc.
+3. **Save & Preview**: Save your form, then preview to test functionality
+4. **Share**: Copy the form URL to collect submissions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS, Shadcn/ui
+- **Drag & Drop**: @dnd-kit
+- **Icons**: Lucide React
 
-## Deploy on Vercel
+## 📊 API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/forms` | List all forms |
+| POST | `/api/forms` | Create new form |
+| GET | `/api/forms/[id]` | Get specific form |
+| PUT | `/api/forms/[id]` | Update form |
+| POST | `/api/forms/[id]/submissions` | Submit form data |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+Deploy to Vercel with one click or build manually:
+
+```bash
+npm run build
+npm run start
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and modern web technologies.
