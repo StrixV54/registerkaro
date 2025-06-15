@@ -1,0 +1,92 @@
+[
+  {
+    "id": "contact-form",
+    "title": "Contact Us Form",
+    "description": "Get in touch with us",
+    "fields": [
+      {
+        "id": "name",
+        "type": "text",
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "required": true,
+        "order": 1
+      },
+      {
+        "id": "email",
+        "type": "text",
+        "label": "Email Address",
+        "placeholder": "Enter your email",
+        "required": true,
+        "order": 2
+      },
+      {
+        "id": "message",
+        "type": "textarea",
+        "label": "Message",
+        "placeholder": "Tell us what you need help with",
+        "required": true,
+        "order": 3
+      },
+      {
+        "id": "priority",
+        "type": "select",
+        "label": "Priority Level",
+        "required": false,
+        "options": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "order": 4
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "survey-form",
+    "title": "Customer Feedback Survey",
+    "description": "Help us improve our services",
+    "fields": [
+      {
+        "id": "satisfaction",
+        "type": "radio",
+        "label": "How satisfied are you with our service?",
+        "required": true,
+        "options": [
+          "Very Satisfied",
+          "Satisfied",
+          "Neutral",
+          "Dissatisfied",
+          "Very Dissatisfied"
+        ],
+        "order": 1
+      },
+      {
+        "id": "recommend",
+        "type": "checkbox",
+        "label": "Would you recommend us to others?",
+        "required": false,
+        "order": 2
+      },
+      {
+        "id": "improvements",
+        "type": "textarea",
+        "label": "What can we improve?",
+        "placeholder": "Share your suggestions",
+        "required": false,
+        "order": 3
+      },
+      {
+        "id": "contact-back",
+        "type": "checkbox",
+        "label": "Can we contact you for follow-up?",
+        "required": false,
+        "order": 4
+      }
+    ],
+    "createdAt": "2024-01-02T00:00:00.000Z",
+    "updatedAt": "2024-01-02T00:00:00.000Z"
+  }
+]
